@@ -1712,7 +1712,10 @@ textarea.form-control {
   color: #252422;
   margin-bottom: 20px;
   position: relative;
-  z-index: 1; }
+  z-index: 1; 
+  cursor:pointer;
+  }
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_cards\.scss}line{font-family:\0000310}}
   .card .image {
     width: 100%;
@@ -1831,11 +1834,14 @@ textarea.form-control {
     font-size: 3em;
     min-height: 64px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_cards\.scss}line{font-family:\00003141}}
-  .card .numbers {
+  .card .box-title {
     font-size: 2em;
-    text-align: right; }
+	margin-top:10px;
+	margin-bottom:10px;
+	
+	}
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_cards\.scss}line{font-family:\00003144}}
-    .card .numbers p {
+    .card .box-title p {
       margin: 0; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_cards\.scss}line{font-family:\00003149}}
   .card ul.team-members li {
@@ -2702,7 +2708,8 @@ textarea.form-control {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_responsive\.scss}line{font-family:\0000374}}
   .card form [class*="col-"] {
-    padding: 6px; }
+    padding: 6px; 
+	}
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_responsive\.scss}line{font-family:\0000377}}
   .card form [class*="col-"]:first-child {
     padding-left: 15px; }
@@ -3241,4 +3248,45 @@ textarea.form-control {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-overflow-scrolling: touch; } }
 
+.shrello-logo	{
+	width:150px;
+	text-align:center;
+	margin-left:15%;
+}
 /*# sourceMappingURL=paper-dashboard.css.map */
+
+.add-img {
+	height:30px;
+	margin-bottom:5px;
+}
+
+.main-box {
+	text-align:center;
+}
+
+#search {
+	width:270px;
+	float:left;
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+
+}
+
+.btn1 {
+	font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif; color: #aaa;
+	text-decoration: none; text-decoration: none;
+	-webkit-border-radius: 3px; 
+	-moz-border-radius: 3px; 
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+	border-top-left-radius:0px;
+	border-bottom-left-radius:0px;
+	padding: 8px 10px; 
+	border-top: 1px solid #e9703e; 
+	border-right: 1px solid #e9703e; 
+	border-bottom: 1px solid #e9703e; 
+	border-left:none;
+	
+	display: inline-block;
+}
