@@ -455,7 +455,7 @@ hr {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/mixins\/_sidebar\.scss}line{font-family:\0000336}}
   .sidebar[data-active-color="danger"] .nav li.active > a,
   .off-canvas-sidebar[data-active-color="danger"] .nav li.active > a {
-    color: #EB5E28;
+    color: #039be5;
     opacity: 1; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_sidebar-and-main-panel\.scss}line{font-family:\00003160}}
@@ -1017,7 +1017,7 @@ hr {
     vertical-align: middle; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_inputs\.scss}line{font-family:\0000367}}
   .form-control.border-input {
-    border: 1px solid #CCC5B9; }
+    border: 1px solid #ccc; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_inputs\.scss}line{font-family:\0000370}}
   .open .form-control {
     border-bottom-color: transparent; }
@@ -1760,8 +1760,9 @@ textarea.form-control {
     margin-bottom: 5px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_cards\.scss}line{font-family:\0000355}}
   .card .title {
+    font-family: 'Muli', Arial, sans-serif;
     margin: 0;
-    color: #252422;
+    color: #777;
     font-weight: 300; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_cards\.scss}line{font-family:\0000360}}
   .card .avatar {
@@ -1835,6 +1836,7 @@ textarea.form-control {
     min-height: 64px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_cards\.scss}line{font-family:\00003141}}
   .card .box-title {
+    color: #777;
     font-size: 2em;
 	margin-top:10px;
 	margin-bottom:10px;
@@ -3249,7 +3251,7 @@ textarea.form-control {
     -webkit-overflow-scrolling: touch; } }
 
 .shrello-logo	{
-	width:150px;
+	height: 38px;
 	text-align:center;
 	margin-left:15%;
 }
@@ -3272,8 +3274,10 @@ textarea.form-control {
 }
 
 .btn1 {
-	font-size: 16px;
-	font-family: Helvetica, Arial, sans-serif; color: #aaa;
+	background-color: #039be5;
+  font-size: 16px;
+	font-family: Helvetica, Arial, sans-serif; 
+  color: #fff;
 	text-decoration: none; text-decoration: none;
 	-webkit-border-radius: 3px; 
 	-moz-border-radius: 3px; 
@@ -3282,9 +3286,9 @@ textarea.form-control {
 	border-top-left-radius:0px;
 	border-bottom-left-radius:0px;
 	padding: 8px 10px; 
-	border-top: 1px solid #e9703e; 
-	border-right: 1px solid #e9703e; 
-	border-bottom: 1px solid #e9703e; 
+	border-top: 1px solid #039be5; 
+	border-right: 1px solid #039be5; 
+	border-bottom: 1px solid #039be5; 
 	border-left:none;
 	display: inline-block;
 }
