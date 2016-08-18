@@ -3293,6 +3293,10 @@ textarea.form-control {
 	display: inline-block;
 }
 
+.btn1:hover {
+	color:white;
+}
+
 .skill-modal {
 		border:1px solid #ECECEB;
 		padding-top:4px;
