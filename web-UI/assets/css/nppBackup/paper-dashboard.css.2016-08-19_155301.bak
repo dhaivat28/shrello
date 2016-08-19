@@ -3339,8 +3339,8 @@ textarea.form-control {
 background-color:#fafafc;
 height:230px;
 padding-top:12px;
-padding-right:5px;
-padding-left:5px;
+padding-right:8px;
+padding-left:8px;
 }
 
 #search1 {

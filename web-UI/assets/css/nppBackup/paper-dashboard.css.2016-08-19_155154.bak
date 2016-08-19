@@ -3338,9 +3338,7 @@ textarea.form-control {
 .skill-header {
 background-color:#fafafc;
 height:230px;
-padding-top:12px;
-padding-right:5px;
-padding-left:5px;
+padding:10px;
 }
 
 #search1 {

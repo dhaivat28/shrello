@@ -3338,9 +3338,7 @@ textarea.form-control {
 .skill-header {
 background-color:#fafafc;
 height:230px;
-padding-top:12px;
-padding-right:5px;
-padding-left:5px;
+padding:10px;
 }
 
 #search1 {
@@ -3375,7 +3373,8 @@ height:110px;
 
 .dp-inner {
 float:left;
-padding-left:25px;
+margin-top:5px;
+padding-left:20px;
 }
 
 .result-details {

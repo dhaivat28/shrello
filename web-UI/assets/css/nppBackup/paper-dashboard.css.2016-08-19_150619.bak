@@ -3338,9 +3338,7 @@ textarea.form-control {
 .skill-header {
 background-color:#fafafc;
 height:230px;
-padding-top:12px;
-padding-right:5px;
-padding-left:5px;
+padding:10px;
 }
 
 #search1 {
@@ -3354,7 +3352,7 @@ height:110px;
 }
 
 .result {
-	height:170px;
+	height:150px;
 	width:100%;
 	background:white;
 	box-shadow:0 2px 2px rgba(204, 197, 185, 0.5);
@@ -3375,7 +3373,8 @@ height:110px;
 
 .dp-inner {
 float:left;
-padding-left:25px;
+margin-top:5px;
+padding-left:20px;
 }
 
 .result-details {
@@ -3392,29 +3391,6 @@ h16 span {
 
 .loc {
 	height:20px;
-top:-2px;
-left:-2px;
-position:relative;
-}
-
-
-.btn2 {
-font-size: 13px; 
-margin-left:10px;
-margin-bottom:10px; 
-font-family: Helvetica, Arial, sans-serif; 
-color: #aaa; 
-text-decoration: none;
-text-decoration: none; 
--webkit-border-radius: 3px; 
--moz-border-radius: 3px; 
-border-radius: 3px; 
-padding: 4px 8px 4px 8px; 
-border: 1px solid #039be5; 
-display: inline-block;
-
-}
-
-.btn2:hover {
-	color:#aaa;
+	top:-25px;
+position:absolute;
 }
