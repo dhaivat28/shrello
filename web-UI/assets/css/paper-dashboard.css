@@ -966,7 +966,7 @@ hr {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_inputs\.scss}line{font-family:\0000314}}
 .form-control {
-  
+
   border: medium none;
   border-radius: 4px;
   color: #66615b;
@@ -1712,7 +1712,7 @@ textarea.form-control {
   color: #252422;
   margin-bottom: 20px;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
   cursor:pointer;
   }
 
@@ -1840,7 +1840,7 @@ textarea.form-control {
     font-size: 2em;
 	margin-top:10px;
 	margin-bottom:10px;
-	
+
 	}
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_cards\.scss}line{font-family:\00003144}}
     .card .box-title p {
@@ -2710,7 +2710,7 @@ textarea.form-control {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_responsive\.scss}line{font-family:\0000374}}
   .card form [class*="col-"] {
-    padding: 6px; 
+    padding: 6px;
 	}
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/conacelelena\/paper-dashboard\/assets\/sass\/paper\/_responsive\.scss}line{font-family:\0000377}}
   .card form [class*="col-"]:first-child {
@@ -3276,19 +3276,19 @@ textarea.form-control {
 .btn1 {
 	background-color: #039be5;
   font-size: 16px;
-	font-family: Helvetica, Arial, sans-serif; 
+	font-family: Helvetica, Arial, sans-serif;
   color: #fff;
 	text-decoration: none; text-decoration: none;
-	-webkit-border-radius: 3px; 
-	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 	border-top-right-radius:3px;
 	border-bottom-right-radius:3px;
 	border-top-left-radius:0px;
 	border-bottom-left-radius:0px;
-	padding: 8px 10px; 
-	border-top: 1px solid #039be5; 
-	border-right: 1px solid #039be5; 
-	border-bottom: 1px solid #039be5; 
+	padding: 8px 10px;
+	border-top: 1px solid #039be5;
+	border-right: 1px solid #039be5;
+	border-bottom: 1px solid #039be5;
 	border-left:none;
 	display: inline-block;
 }
@@ -3327,7 +3327,7 @@ textarea.form-control {
 	margin-top:10px;
 	text-align:right;
 	padding-right:27px;
-	
+
 }
 
 .skill-box {
@@ -3369,8 +3369,8 @@ height:110px;
 
 .dp-img {
 	height:110px;
-	border-radius:4px;	
-	
+	border-radius:4px;
+
 }
 
 .dp-inner {
@@ -3399,22 +3399,41 @@ position:relative;
 
 
 .btn2 {
-font-size: 13px; 
+font-size: 13px;
 margin-left:10px;
-margin-bottom:10px; 
-font-family: Helvetica, Arial, sans-serif; 
-color: #aaa; 
+margin-bottom:10px;
+font-family: Helvetica, Arial, sans-serif;
+color: #aaa;
 text-decoration: none;
-text-decoration: none; 
--webkit-border-radius: 3px; 
--moz-border-radius: 3px; 
-border-radius: 3px; 
-padding: 4px 8px 4px 8px; 
-border: 1px solid #039be5; 
+text-decoration: none;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+padding: 4px 8px 4px 8px;
+border: 1px solid #039be5;
 display: inline-block;
 
 }
-
 .btn2:hover {
 	color:#aaa;
 }
+.btn3 {
+font-size: 13px;
+background-color: #039be5;
+margin-left:10px;
+margin-bottom:10px;
+font-family: Helvetica, Arial, sans-serif;
+color: #fff;
+text-decoration: none;
+text-decoration: none;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+padding: 4px 8px 4px 8px;
+border: 1px solid #039be5;
+display: inline-block;
+}
+.btn3:hover {
+  color:#fff;
+}
+s
