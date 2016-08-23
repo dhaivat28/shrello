@@ -3,45 +3,58 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="fill"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 tools:context="com.shrello.shrelloapp.MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:focusableInTouchMode="true"
-        android:orientation="vertical">
+        android:gravity="fill">
 
         <ImageView
-            android:layout_weight="3"
+            android:id="@+id/logo"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="200dp"
             android:src="@drawable/logo"/>
-        <View
-            android:layout_weight="5"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"></View>
+        <TextView
+            android:id="@+id/greeting_msg"
+            android:layout_below="@id/logo"
+            android:text="Welcome to \nShrello."
+            android:textSize="35sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
         <LinearLayout
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <Button
-            android:textAllCaps="false"
-            android:text="Sign Up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            />
-        <Button
-            android:textAllCaps="false"
-            android:text="Lig In"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            />
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="#fff"
+                android:background="@drawable/btn_full"
+                android:textAllCaps="false"
+                android:onClick="load_sign_up_activity"
+                android:stateListAnimator="@null"
+                />
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Log In"
+                android:background="@drawable/btn_border"
+                android:textAllCaps="false"
+                />
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>

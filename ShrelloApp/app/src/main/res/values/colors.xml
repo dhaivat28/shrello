@@ -3,4 +3,8 @@
     <color name="colorPrimary">#039BE5</color> <!--light blue 600-->
     <color name="colorPrimaryDark">#0277BD</color><!--light blue 800-->
     <color name="colorAccent">#03A9F4</color><!--light blue 500-->
+    <color name="colorPrimary_25opacity">#19039be5</color>
+    <color name="colorPrimary_50opacity">#32039be5</color>
+    <color name="colorPrimary_100opacity">#64039be5</color>
+    <color name="noColor">#00039be5</color>
 </resources>

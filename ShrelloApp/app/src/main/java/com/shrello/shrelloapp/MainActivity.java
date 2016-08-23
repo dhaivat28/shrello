@@ -13,13 +13,6 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.EditText;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
 public class MainActivity extends AppCompatActivity
 {
 	EditText linkedin,stackoverflow,error_text,rlinkedin,rstackoverflow;
@@ -48,8 +41,7 @@ public class MainActivity extends AppCompatActivity
 
 	public void load_sign_up_activity(View view)
 	{
-		Intent intent = new Intent(this, sign_up.class);
+		Intent intent = new Intent(this, signup_name.class);
 		startActivity(intent);
 	}
-
 }
