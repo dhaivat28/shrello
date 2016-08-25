@@ -17,8 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".sign_up">
-        </activity>
         <activity android:name=".signup_name">
         </activity>
         <activity android:name=".signup_email_sequence">

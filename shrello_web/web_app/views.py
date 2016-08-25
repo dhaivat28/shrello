@@ -17,6 +17,16 @@ def signup(request):
 		user_detail_object.save()
 		auth_model_object = auth_model(email=key_email,password=key_password)
 		auth_model_object.save()
-		return HttpResponse()
+		return HttpResponse("succesful")
 	else:
 		return HttpResponse("fuck off you hacker!")
+
+@csrf_exempt
+def email_check(request):
+	if request.method=="POST":
+		key_email = request.POST['KEY_EMAIL']
+		res= auth_model.objects.filter(email = key_email)
+		if len(res)>0:
+			return HttpResponse("false")
+		else:
+			return HttpResponse("true")
