@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
-
+from django.http import JsonResponse
 from models import user_detail,auth_model
 def index(request):
 	return HttpResponse("worked")
@@ -27,6 +27,6 @@ def email_check(request):
 		key_email = request.POST['KEY_EMAIL']
 		res= auth_model.objects.filter(email = key_email)
 		if len(res)>0:
-			return HttpResponse("false")
+			return JsonResponse({'val':'false'})
 		else:
-			return HttpResponse("true")
+			return JsonResponse({'val':'true'})

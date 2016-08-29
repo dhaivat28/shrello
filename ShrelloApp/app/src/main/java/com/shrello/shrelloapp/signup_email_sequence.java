@@ -21,11 +21,11 @@ import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
 import java.util.Map;
-
+import org.json.*;
 public class signup_email_sequence extends AppCompatActivity
 {
 
-	String mfullname;
+	String mfullname,val;
 	String mEmail;
 	ProgressDialog progress;
 
@@ -61,8 +61,22 @@ public class signup_email_sequence extends AppCompatActivity
 						@Override
 						public void onResponse(String response)
 						{
-
-							if (response.contentEquals("true"))
+							JSONObject obj = null;
+							try
+							{
+								obj = new JSONObject(response);
+							} catch (JSONException e)
+							{
+								e.printStackTrace();
+							}
+							try
+							{	
+								val = obj.getString("val");
+							} catch (JSONException e)
+							{
+								e.printStackTrace();
+							}
+							if (val.contentEquals("true"))
 							{
 								progress.dismiss();
 								Intent intent = new Intent(signup_email_sequence.this, signup_password_sequence.class);
