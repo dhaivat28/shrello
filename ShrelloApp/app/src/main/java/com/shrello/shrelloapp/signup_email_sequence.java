@@ -49,7 +49,7 @@ public class signup_email_sequence extends AppCompatActivity
 		else
 		{
 
-			progress = ProgressDialog.show(this, "dialog title", "dialog message", true);
+			progress = ProgressDialog.show(this, "Please wait", "Checking", true);
 			new Thread(new Runnable()
 			{
 				@Override
