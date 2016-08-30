@@ -118,6 +118,7 @@ public class signup_email_sequence extends AppCompatActivity
 						@Override
 						public void onErrorResponse(VolleyError error)
 						{
+							progress.dismiss();
 							Toast.makeText(signup_email_sequence.this, error.toString(), Toast.LENGTH_LONG).show();
 						}
 					})
