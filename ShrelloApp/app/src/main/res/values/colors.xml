@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#039BE5</color> <!--light blue 600-->
-    <color name="colorPrimaryDark">#0277BD</color><!--light blue 800-->
-    <color name="colorAccent">#03A9F4</color><!--light blue 500-->
-    <color name="colorPrimary_25opacity">#19039be5</color>
-    <color name="colorPrimary_50opacity">#32039be5</color>
-    <color name="colorPrimary_100opacity">#64039be5</color>
-    <color name="noColor">#00039be5</color>
+    <color name="colorPrimary">#fafafa</color>
+    <color name="colorPrimaryDark">#0277BD</color>
+    <color name="colorAccent">#03A9F4</color>
+    <color name="PrimaryBlue">#039BE5</color>
+    <color name="PrimaryBlue_25opacity">#19039be5</color>
+    <color name="PrimaryBlue_50opacity">#32039be5</color>
+    <color name="PrimaryBlue_100opacity">#64039be5</color>
+    <color name="noColor">@android:color/transparent</color>
 </resources>

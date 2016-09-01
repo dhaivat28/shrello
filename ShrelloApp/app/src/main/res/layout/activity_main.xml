@@ -24,7 +24,7 @@
             android:layout_below="@id/logo"
             android:text="Welcome to \nShrello."
             android:textSize="35sp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/PrimaryBlue"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <LinearLayout
@@ -50,7 +50,7 @@
                 android:layout_margin="10dp"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/PrimaryBlue"
                 android:text="Log In"
                 android:background="@drawable/btn_border"
                 android:textAllCaps="false"

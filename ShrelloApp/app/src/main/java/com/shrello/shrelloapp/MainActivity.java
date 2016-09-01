@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+/*
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
 
 			TypedValue typedValue = new TypedValue();
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity
 			setTaskDescription(td);
 			bm.recycle();
 
-		}
+		}*/
 	}
 
 	public void load_sign_up_activity(View view)

@@ -1,5 +1,7 @@
 package com.shrello.shrelloapp;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,6 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
@@ -27,7 +30,7 @@ public class signup_password_sequence extends AppCompatActivity
 {
 	String mfullname, memail, password = null;
 	String encoded_password;
-
+	ProgressDialog progress;
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -55,18 +58,53 @@ public class signup_password_sequence extends AppCompatActivity
 		{
 			encoded_password = encryptPassword(password);
 			String url = "http://192.168.1.101:8000/signup/";
+			progress = ProgressDialog.show(this, "Please wait", "Checking", true);
 			StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>()
 			{
 				@Override
 				public void onResponse(String response)
 				{
-					Toast.makeText(signup_password_sequence.this, response, Toast.LENGTH_LONG).show();
+
+					JSONObject obj = null;
+					String val=null;
+					try
+					{
+						obj = new JSONObject(response);
+					} catch (JSONException e)
+					{
+						e.printStackTrace();
+					}
+					try
+					{
+						val = obj.getString("val");
+					} catch (JSONException e)
+					{
+						e.printStackTrace();
+					}
+					if(val.contentEquals("succesful"))
+					{
+						progress.dismiss();
+						Toast.makeText(signup_password_sequence.this, val, Toast.LENGTH_LONG).show();
+						Intent intent = new Intent(signup_password_sequence.this, dp_upload.class);
+						Bundle bundle = new Bundle();
+						//Add your data to bundle
+						bundle.putString("email", memail);
+						//Add the bundle to the intent
+						intent.putExtras(bundle);
+						startActivity(intent);
+					}
+					else
+					{
+						progress.dismiss();
+						Toast.makeText(signup_password_sequence.this, val, Toast.LENGTH_LONG).show();
+					}
 				}
 			}, new Response.ErrorListener()
 			{
 				@Override
 				public void onErrorResponse(VolleyError error)
 				{
+					progress.dismiss();
 					Toast.makeText(signup_password_sequence.this, error.toString(), Toast.LENGTH_LONG).show();
 				}
 			})

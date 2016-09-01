@@ -23,6 +23,8 @@
         </activity>
         <activity android:name=".signup_password_sequence">
         </activity>
+        <activity android:name=".dp_upload">
+        </activity>
     </application>
 
 </manifest>

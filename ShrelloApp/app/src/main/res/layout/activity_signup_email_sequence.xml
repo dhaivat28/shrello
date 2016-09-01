@@ -70,7 +70,7 @@
                 android:layout_below="@+id/greeting_sub_msg"
                 android:layout_marginTop="20dp"
                 android:text="Email"
-                android:textColor="@color/colorPrimary_100opacity"/>
+                android:textColor="@color/PrimaryBlue_100opacity"/>
 
             <EditText
                 android:id="@+id/edit_fullname"

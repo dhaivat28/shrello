@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signup_email_sequence">
+    tools:context="com.shrello.shrelloapp.dp_upload">
     <Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
                 android:id="@+id/greeting_msg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="What's your email?"
+                android:text="Pick a profile photo"
                 android:textColor="@color/PrimaryBlue"
                 android:textSize="30sp"/>
 
@@ -52,25 +52,21 @@
                 android:layout_below="@id/greeting_msg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't worry, no spams!"
+                android:layout_marginTop="5dp"
+                android:text="Have a favorite selfie? Upload it now."
                 android:textColor="@color/PrimaryBlue"
-                android:textSize="20sp"/>
+                android:textSize="16sp"/>
 
-            <TextView
-                android:id="@+id/email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/greeting_sub_msg"
-                android:layout_marginTop="20dp"
-                android:text="Email"
-                android:textColor="@color/PrimaryBlue_100opacity"/>
-
-            <EditText
-                android:id="@+id/edit_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/email"
-                android:textColor="#777"/>
+            <ImageButton
+                android:id="@+id/avatar"
+                android:background="@color/noColor"
+                android:layout_below="@id/greeting_sub_msg"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/upload_btn"
+                android:onClick="img_select"
+                android:scaleType="fitCenter"
+                android:layout_width="200dp"
+                android:layout_height="200dp"/>
         </RelativeLayout>
     </ScrollView>
 
@@ -87,4 +83,17 @@
         android:text="Next"
         android:textAllCaps="false"
         android:textColor="#fff"/>
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_border"
+        android:onClick="load_signup_password_email"
+        android:padding="0dp"
+        android:stateListAnimator="@null"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:textColor="@color/PrimaryBlue"/>
 </RelativeLayout>

@@ -102,6 +102,7 @@ public class signup_email_sequence extends AppCompatActivity
 								}
 								else
 								{
+
 									AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(signup_email_sequence.this);
 									alertDialogBuilder.setMessage("Looks like you already have an account, please log in");
 
@@ -120,8 +121,9 @@ public class signup_email_sequence extends AppCompatActivity
 								});*/
 
 									AlertDialog alertDialog = alertDialogBuilder.create();
-									alertDialog.show();
 									progress.dismiss();
+									alertDialog.show();
+
 								}
 
 							}
