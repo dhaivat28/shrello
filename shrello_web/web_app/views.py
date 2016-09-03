@@ -30,3 +30,7 @@ def email_check(request):
 			return JsonResponse({'val':'false'})
 		else:
 			return JsonResponse({'val':'true'})
+
+@csrf_exempt
+def img_test(request):
+	return JsonResponse({'val':'succesful'})
