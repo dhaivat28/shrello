@@ -34,4 +34,9 @@ def email_check(request):
 @csrf_exempt
 def img_test(request):
 	print '\n\n'+str(request)+'\n\n'
-	return JsonResponse({'val':'succesful'})
+	if request.method=="POST":
+		img = request.POST['image']
+		with open("imageToSave.png", "wb") as fh:
+			fh.write(img.decode('base64'))
+		#print img
+		return JsonResponse({'val':'succesful'})

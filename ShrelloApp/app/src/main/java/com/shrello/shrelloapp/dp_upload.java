@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -34,7 +33,8 @@ public class dp_upload extends AppCompatActivity
 	private String KEY_NAME = "name";
 	ImageButton mImg_Btn;
 	private Bitmap bitmap;
-	String URL="http://192.168.1.101:8000/img_test/";
+	String URL = "http://192.168.1.101:8000/img_test/";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -60,23 +60,21 @@ public class dp_upload extends AppCompatActivity
 			Uri filePath = data.getData();
 			/*try
 			{*/
-				//Getting the Bitmap from Gallery
-				//bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
-				//Setting the Bitmap to ImageView
-				//mImg_Btn.setImageBitmap(bitmap);
-				CropImage.activity(filePath)
-						.setGuidelines(CropImageView.Guidelines.ON)
-						.setAspectRatio(1,1)
-						.setFixAspectRatio(true)
-						.start(this);
+			//Getting the Bitmap from Gallery
+			//bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+			//Setting the Bitmap to ImageView
+			//mImg_Btn.setImageBitmap(bitmap);
+			CropImage.activity(filePath).setGuidelines(CropImageView.Guidelines.ON).setAspectRatio(1, 1).setFixAspectRatio(true).start(this);
 			/*} catch (IOException e)
 			{
 				e.printStackTrace();
 			}*/
 		}
-		if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+		if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE)
+		{
 			CropImage.ActivityResult result = CropImage.getActivityResult(data);
-			if (resultCode == RESULT_OK) {
+			if (resultCode == RESULT_OK)
+			{
 				Uri resultUri = result.getUri();
 				try
 				{
@@ -87,7 +85,9 @@ public class dp_upload extends AppCompatActivity
 				{
 					e.printStackTrace();
 				}
-			} else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+			}
+			else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE)
+			{
 				Exception error = result.getError();
 			}
 		}
@@ -105,29 +105,32 @@ public class dp_upload extends AppCompatActivity
 
 	public void upload(View view)
 	{
-		if(bitmap != null)
+		if (bitmap != null)
 		{
 
-			final ProgressDialog loading = ProgressDialog.show(this,"Uploading...","Please wait...",false,false);
-			StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
-					new Response.Listener<String>() {
-						@Override
-						public void onResponse(String s) {
-							//Disimissing the progress dialog
-							loading.dismiss();
-							//Showing toast message of the response
-							Toast.makeText(dp_upload.this, s , Toast.LENGTH_LONG).show();
-						}
-					},
-					new Response.ErrorListener() {
-						@Override
-						public void onErrorResponse(VolleyError volleyError) {
-							//Dismissing the progress dialog
-							loading.dismiss();
-							//Showing toast
-							Toast.makeText(dp_upload.this, "e:"+volleyError.getMessage().toString(), Toast.LENGTH_LONG).show();
-						}
-					}){
+			final ProgressDialog loading = ProgressDialog.show(this, "Uploading...", "Please wait...", false, false);
+			StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>()
+			{
+				@Override
+				public void onResponse(String s)
+				{
+					//Disimissing the progress dialog
+					loading.dismiss();
+					//Showing toast message of the response
+					Toast.makeText(dp_upload.this, s, Toast.LENGTH_LONG).show();
+				}
+			}, new Response.ErrorListener()
+			{
+				@Override
+				public void onErrorResponse(VolleyError volleyError)
+				{
+					//Dismissing the progress dialog
+					loading.dismiss();
+					//Showing toast
+					Toast.makeText(dp_upload.this, "e:" + volleyError.getMessage().toString(), Toast.LENGTH_LONG).show();
+				}
+			})
+			{
 				@Override
 				protected Map<String, String> getParams() throws AuthFailureError
 				{
@@ -138,7 +141,7 @@ public class dp_upload extends AppCompatActivity
 					String name = "test";
 
 					//Creating parameters
-					Map<String,String> params = new Hashtable<String, String>();
+					Map<String, String> params = new Hashtable<String, String>();
 
 					//Adding parameters
 					params.put(KEY_IMAGE, image);
@@ -157,7 +160,7 @@ public class dp_upload extends AppCompatActivity
 		}
 		else
 		{
-			Toast.makeText(dp_upload.this, "please upload image or skip" , Toast.LENGTH_SHORT).show();
+			Toast.makeText(dp_upload.this, "please upload image or skip", Toast.LENGTH_SHORT).show();
 		}
 	}
 }
