@@ -20,6 +20,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -56,15 +58,37 @@ public class dp_upload extends AppCompatActivity
 		if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null)
 		{
 			Uri filePath = data.getData();
-			try
-			{
+			/*try
+			{*/
 				//Getting the Bitmap from Gallery
-				bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+				//bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
 				//Setting the Bitmap to ImageView
-				mImg_Btn.setImageBitmap(bitmap);
-			} catch (IOException e)
+				//mImg_Btn.setImageBitmap(bitmap);
+				CropImage.activity(filePath)
+						.setGuidelines(CropImageView.Guidelines.ON)
+						.setAspectRatio(1,1)
+						.setFixAspectRatio(true)
+						.start(this);
+			/*} catch (IOException e)
 			{
 				e.printStackTrace();
+			}*/
+		}
+		if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+			CropImage.ActivityResult result = CropImage.getActivityResult(data);
+			if (resultCode == RESULT_OK) {
+				Uri resultUri = result.getUri();
+				try
+				{
+					bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), resultUri);
+					bitmap = Bitmap.createScaledBitmap(bitmap, 640, 640, false);
+					mImg_Btn.setImageBitmap(bitmap);
+				} catch (IOException e)
+				{
+					e.printStackTrace();
+				}
+			} else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+				Exception error = result.getError();
 			}
 		}
 	}
@@ -100,9 +124,8 @@ public class dp_upload extends AppCompatActivity
 						public void onErrorResponse(VolleyError volleyError) {
 							//Dismissing the progress dialog
 							loading.dismiss();
-
 							//Showing toast
-							Toast.makeText(dp_upload.this, volleyError.getMessage().toString(), Toast.LENGTH_LONG).show();
+							Toast.makeText(dp_upload.this, "e:"+volleyError.getMessage().toString(), Toast.LENGTH_LONG).show();
 						}
 					}){
 				@Override

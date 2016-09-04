@@ -33,4 +33,5 @@ def email_check(request):
 
 @csrf_exempt
 def img_test(request):
+	print '\n\n'+str(request)+'\n\n'
 	return JsonResponse({'val':'succesful'})
