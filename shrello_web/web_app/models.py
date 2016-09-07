@@ -11,5 +11,5 @@ class user_detail(models.Model):
 	email=models.CharField(max_length=200)
 	full_name=models.CharField(max_length=200)
 	location=models.CharField(max_length=200, null=True, blank=True)
-	profile_picture=models.FileField(upload_to='profile_pictures/', null=True, blank=True)
+	profile_picture=models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
 	personal_note=models.TextField(null=True, blank=True)
