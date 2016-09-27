@@ -32,10 +32,13 @@ def email_check(request):
 			return JsonResponse({'val':'true'})
 
 @csrf_exempt
-def img_test(request):	
+def img_test(request):
 	if request.method=="POST":
 		img = request.POST['image']
 		with open("imageToSave.png", "wb") as fh:
 			fh.write(img.decode('base64'))
 		#print img
 		return JsonResponse({'val':'succesful'})
+
+def admin(request):
+	return HttpResponse("welcome")
