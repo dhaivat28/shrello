@@ -40,5 +40,18 @@ def img_test(request):
 		#print img
 		return JsonResponse({'val':'succesful'})
 
-def admin(request):
-	return HttpResponse("welcome")
+def add_org(request):
+	response = HttpResponse()
+	return render(request , 'index.html')
+
+def add_org_db(request):
+
+	if request.method=='POST':
+		name=request.POST['name']
+		add=request.POST['add']
+		url=request.POST['org_url']
+		email=request.POST['email']
+		phone=request.POST['phone']
+		username=request.POST['username']
+		response="name:"+name+"<br>add:"+add+"<br>url:"+url+"<br>email:"+email+"<br>phone:"+phone+"<br>username:"+username
+		return HttpResponse(response)
