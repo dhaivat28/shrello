@@ -54,4 +54,6 @@ def add_org_db(request):
 		phone=request.POST['phone']
 		username=request.POST['username']
 		response="name:"+name+"<br>add:"+add+"<br>url:"+url+"<br>email:"+email+"<br>phone:"+phone+"<br>username:"+username
-		return HttpResponse(response)
+		return render(request , 'review.html')
+	else:
+		return render(request , 'review.html')
