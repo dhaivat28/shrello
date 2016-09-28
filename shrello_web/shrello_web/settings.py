@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'shrello_web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'shrello_db',                      
+        'NAME': 'shrello_db',
         'USER': 'shrello',
         'PASSWORD': 'shrello@123',
         'HOST': '127.0.0.1',
