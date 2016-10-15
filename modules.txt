@@ -1,0 +1,77 @@
+modules:
+
+shrello/
+		App/
+			users/ (for candidate)
+					Sign-up/
+							-referral code verification
+							-Form validations
+							-mail checker
+							-connect org code
+							-password encryption ---(R1)
+							-profile pic uploader --> invokes R2 & go to sub-M1
+					Login/
+							-R1
+							-Authentication
+							-Session manager ---(R2)
+							-Password reset
+
+					Profile builder/---(sub-M1)
+									-Interactive questions to extract information
+									-Suggestive guide
+									-Profile completion status Bar
+									-Micro-Spiders for Digital footprints
+									-DB push
+					Referral/
+							-Generate referral code
+							-refer a friend
+							-apply to refer job
+
+					Notifications/
+									-New vacancy in org
+									-received a referral from friend
+									-Referral accepted by friend
+									-Referred friend accepted by org
+					Recommendation/
+									-Tinder like UI to receive recommendations
+									-apply/reject handler
+
+					Job application status/
+											-applied
+											-accepted
+											-referred jobs
+											-referred candidates
+					settings/
+							-update information
+							-change organization
+			system/
+					micro-spiders/ (background)
+									-scrap all information
+									-update information on server daily basis
+									-xPath receiver
+									-Bug and Error reporting
+		web/
+			admin/
+					-Add Organization to system
+					-Generate Organization unique code
+					-Subscription tracking
+					-Access control
+					-Analytics and report generation
+					-Organization Termination
+					-Help/Assist Dashboard
+					-Bug Tracking and Error listings
+					-xPath update of Micro-spider
+			System/
+					-Application request handlers
+					-Password reset
+					-Referral code Generator
+					-Maintain referral log
+					-Map and record referrals
+			Recruiter/
+						-Login
+						-Post Vacancy
+						-Browse Candidates
+						-View and manage application
+						-Sort listing and managing candidates
+						-Referral tracking
+						-referral rewards

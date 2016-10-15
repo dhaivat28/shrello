@@ -4,6 +4,9 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from models import user_detail,auth_model
+from random import choice
+from string import ascii_uppercase, ascii_lowercase, digits
+
 def index(request):
 	return HttpResponse("worked")
 
@@ -45,7 +48,7 @@ def add_org(request):
 	return render(request , 'index.html')
 
 def add_org_db(request):
-
+	code=''.join(choice(ascii_uppercase + ascii_lowercase + digits) for i in range(4))
 	if request.method=='POST':
 		name=request.POST['name']
 		add=request.POST['add']
@@ -56,4 +59,5 @@ def add_org_db(request):
 		response="name:"+name+"<br>add:"+add+"<br>url:"+url+"<br>email:"+email+"<br>phone:"+phone+"<br>username:"+username
 		return render(request , 'review.html')
 	else:
-		return render(request , 'review.html')
+		#return render(request , 'review.html')
+		return HttpResponse("<h1>"+code+"</h1>")
